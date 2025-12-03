@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="FullScreen">
+        <div id="FirstPoint">Hotel Management system</div>
+        <div class="Sec-Content">
+            <div id="First_Sec"><img src="HotelLogo.png"></div>
+            <div id="Second_Sec"><img src="HotelBeach.png"></div>
+        </div>
+        <div id="title">
+            <h1>Hotel Management System</h1>
+        </div>
+         <div class="MainBody">
+                <!-- Left Menu -->
+                <div class="MenuType" id="menuBtn">
+                    <div id="FirstMenu">
+                        <h1 style="cursor: pointer;"><i class="fa-solid fa-bars"></i> Menu</h1>
+                        <ul>
+                            <a href="#"><li>Customer</li></a>
+                            <a href="#"><li>Room</li></a>
+                            <a href="#"><li>Details</li></a>
+                            <a href="#"><li>Reports</li></a>
+                            <a href="#"><li>Logout</li></a>
+                        </ul>
+                    </div>
+
+                    <div class="Pizza">
+                        <img src="Pizza.png">
+                    </div>
+
+                    <div id="HotelBedroom">
+                        <img src="HotelBedRoom.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Right Side Content -->
+                <div id="second_menu">
+                    <div class="FullScreen">
+                        <div id="head">
+                            <h2>Hotel management system</h2>
+                        </div>
+                        <div id="Sec_head">
+                            <h2>Add Customer Details</h2>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="FormValid">
+                            <div class="First_Side">
+                                <h3>CUSTOMER DETAILS</h3>
+                                <div class="formSec">
+                                    <div id="myname">
+                                        <h4>CUSTOMER REF: </h4>
+                                        <input type="text" id="customerRef" readonly>
+                                    </div>
+                                    <div id="myname">
+                                        <h4>CUSTOMER NAME: </h4>
+                                        <input type="text">
+                                    </div>
+                                    <div id="myname">
+                                        <h4>MOTHER NAME: </h4>
+                                        <input type="text">
+                                    </div>
+                                    <div class="MyMale">
+                                    <label for="gender">GENDER:</label>
+                                    <select id="gender" name="gender">
+                                        <option value=""></option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    </div>
+
+                                    <div id="myname">
+                                        <h4>POST CODE: </h4>
+                                        <input type="text">
+                                    </div>
+                                    <div id="myname">
+                                        <h4>MOBILE: </h4>
+                                        <input type="text">
+                                    </div>
+                                    <div id="myname">
+                                        <h4>EMAIL: </h4>
+                                        <input type="text">
+                                    </div>
+                                    <div class="MyMale">
+                                    <label for="gender">NATIONALITY:</label>
+                                    <select name="nationality">
+                                        <option value=""></option>
+                                        <option value="india">INDIA</option>
+                                        <option value="usa">USA</option>
+                                        <option value="england">ENGLAND</option>
+                                        <option value="dubai">DUBAI8</option>
+                                        <option value="rusia">RUSSIA</option>
+                                        <option value="england">CHINA</option>                                        <option value="india">INDIA</option>
+                                        <option value="saudiArabia">SAUDI ARABIA</option>
+                                        <option value="nepal">NEPAL</option>
+                                    </select>
+                                    </div>
+                                    <div class="MyMale">
+                                    <label for="gender">ID PROOF:</label>
+                                    <select name="IdProof">
+                                        <option value=""></option>
+                                        <option value="aadhar">AADHAR CARD</option>
+                                        <option value="pan">PAN CARD</option>
+                                        <option value="rc">RATION CARD</option>
+                                        <option value="BirthCertificate">BIRTH CERTIFICATE</option>
+                                        <option value="incomeCertificate">INCOME CERTIFICATE</option>
+
+                                    </select>
+                                    </div>
+                                    <div id="myname">
+                                        <h4>ID NUMBER: </h4>
+                                        <input type="text">
+                                    </div>
+                                    <div id="myname">
+                                        <h4>ADDRESS: </h4>
+                                        <input type="text">
+                                    </div>
+                                    <div class="AllBtn">
+                                        <button onclick="addItem()" id="AddBtn">ADD</button>
+                                        <button onclick="updateItem()" id="updateBtn">UPDATE</button>
+                                        <button onclick="deleteItem()" id="DelBtn">DELETE</button>
+                                        <button onclick="clearItem()" id="resetBtn">RESET</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Second_Side">
+                                <div id="second_element">
+                                    <h3>SEARCH AND VIEW DETAILS</h3>
+                                </div>
+                                <div class="FullSearch">
+                                    <button id="search">Search</button>
+                                    <select name="IdProof">
+                                        <option value=""></option>
+                                        <option value="aadhar">CUSTOMER REF.</option>
+                                        <option value="pan">MOBILE</option>
+                                        <option value="rc">MOTHER NAME</option>
+                                        <option value="BirthCertificate">ID NUMBER</option>
+                                        <option value="incomeCertificate">EMAIL</option>
+                                    </select>
+                                    <input type="text"  >
+                                    <button id="Show">SEARCH</button>
+                                    <button id="ShowAList">SHOW NAME</button>
+                                </div>
+                                <table id="customerTable" border="1" style="width:100%; margin-top:20px; border-collapse: collapse;">
+                                    <thead>
+                                        <tr>
+                                            <th>CUSTOMER REF.</th>
+                                            <th>NAME</th>
+                                            <th>MOTHER</th>
+                                            <th>GENDER</th>
+                                            <th>MOBILE</th>
+                                            <th>EMAIL</th>
+                                            <th>NATIONALITY</th>
+                                            <th>ID PROOF</th>
+                                            <th>ID NUMBER</th>
+                                            <th>ADDRESS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+          
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- http://127.0.0.1:5500/HotelManagement%20System/index./html#Home -->

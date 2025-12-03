@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Top Bar */
+#FirstPoint {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(195, 155, 155);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(98, 95, 95);
+    padding-left: 50px;
+    line-height: 30px;
+}
+
+/* 🔹 Main Section with two images side by side */
+.Sec-Content {
+    display: flex;
+    width: 100%;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Left Image Section (Logo) */
+#First_Sec {
+    width: 30%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center; /* centers logo horizontally */
+    align-items: center;     /* centers logo vertically */
+    border: 2px solid rgb(17, 47, 109);
+    background-color: rgb(90, 157, 215);
+    border-radius: 5px;
+
+}
+
+#First_Sec img {
+    width: 90%;              /* keeps a small margin inside */
+    height: auto;            /* maintains aspect ratio */
+    max-height: 300px;       /* limits size */
+    object-fit: contain;     /* keeps full logo visible */
+    display: block;
+}
+
+/* 🔹 Right Image Section (Hotel Beach) */
+#Second_Sec {
+    width: 70%;
+}
+
+#Second_Sec img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;        /* fills the area nicely */
+    display: block;
+}
+
+/* 🔹 Title Section */
+#title {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+}
+
+#title h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    gap: 5px;
+}
+
+/* 🔹 Responsive Fix for smaller screens */
+@media (max-width: 200px) {
+    .Sec-Content {
+        flex-direction: column;   /* stack images vertically */
+        align-items: center;      /* center them */
+    }
+
+    #First_Sec, #Second_Sec {
+        width: 50%;
+    }
+
+    #First_Sec img, #Second_Sec img {
+        width: 50%;
+        height: auto;             /* keeps proportion */
+        max-height: none;         /* allow natural size */
+        object-fit: contain;      /* prevent cropping on small screens */
+    }
+}
+/* 🔹 Main Body Layout (Menu + Content Side by Side) */
+.MainBody {
+    display: flex;                  /* puts MenuType and second_menu side by side */
+    width: 100%;
+    min-height: 500px;
+}
+
+/* 🔹 Left Menu Section */
+.MenuType {
+    width: 250px;                   /* fixed width */
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+#FirstMenu ul a{
+    text-decoration: none;
+    list-style-type:none;
+    color: white;
+}
+.Pizza img, #HotelBedroom img {
+    width: 200px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+/* 🔹 Right Content Section */
+#second_menu {
+    flex: 1;                        /* takes remaining space */
+    background-color: rgb(245, 245, 245);
+}
+
+.FullScreen{
+    box-sizing: border-box;
+}
+#head{
+    border: 2px solid black;
+    height: 30px;
+    width: auto;
+    padding: 3px;
+}
+#head h2{
+    font-size: 1.2rem;
+    color: rgb(63, 55, 55);
+}
+#Sec_head{
+    height: 40px;
+    width: auto;
+    border: 2px solid black;
+    background-color: black;
+
+}
+#Sec_head h2{
+    text-align: center;
+    color: rgb(239, 239, 25);
+    font-size: 1.9rem;
+}
+
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+    .MainBody {
+        flex-direction: column;   /* stack menu above content on small screens */
+    }
+    .MenuType {
+        width: 100%;
+    }
+}
+
+/*Form Validation*/
+.FormValid{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    height: 610px;
+}
+.First_Side{
+    border: 2px solid rgb(41, 39, 39);
+    height: auto;
+    width: 50%;
+}
+
+.formSec{
+    border: 3px solid rgb(10, 9, 9);
+    height: 610px;
+}
+#myname{
+    display: flex;
+    padding: 10px;
+}
+#myname input{
+    margin-left: 50px;
+    width: 250px;
+    height: 25px;
+    border: 3px solid black;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.MyMale{
+    display: flex;
+    padding: 10px;
+    
+}
+
+.MyMale select{
+    margin-left: 50px;
+    width: 250px;
+    height: 25px;
+    border: 3px solid black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.MyMale label{
+    font-weight: bold;
+}
+.AllBtn{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+#AddBtn, #updateBtn, #DelBtn,#resetBtn{
+    border: 2px solid black;
+    height: 30px;
+    width: 80px;
+    background-color: black;
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Second Side Content */
+
+.Second_Side{
+    border: 2px solid rgb(29, 32, 29);
+    height: auto;
+    width: 50%;
+}
+#second_element{
+    padding-bottom: 10px;
+}
+.FullSearch{
+    display: flex;
+    height: 25px;
+    gap: 20px;
+}
+#search{
+    background-color: red;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+.FullScreen select{
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.FullScreen input{
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#Show, #ShowAList{
+    border: 2px solid black;
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+}
+#customerTable{
+    display: block;
+    max-height: 530px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+#customerTable thead{
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+#customerTable th, #customerTable td {
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 10px;
+}
+
+#customerTable th {
+    background-color: black;
+    color: yellow;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .MainBody {
+        flex-direction: column;
+    }
+
+    .MenuType {
+        width: 100%;
+        align-items: center;
+    }
+
+    .MenuType img {
+        width: 150px;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .FormValid {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .First_Side, 
+    .Second_Side {
+        width: 100%;
+    }
+
+    #myname input, 
+    .MyMale select {
+        width: 200px;
+    }
+}
+
+.hide-all {
+    display: none !important;
+}
+
+.full-width {
+    width: 100% !important;
+}
